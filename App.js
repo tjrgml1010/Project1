@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { StyleSheet, Text, View ,Button } from 'react-native';
+import StopWatch from './components/Stopwatch';
+import { StyleSheet, View } from 'react-native';
 
 
 export default function App() {
@@ -11,10 +10,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.cnt}>{cnt}</Text>
-      <Button title="더하기" onPress={ () => setCnt(cnt+1) }></Button>
-      <Button title="빼기" onPress={ () => setCnt(cnt-1) }></Button>
-      <StatusBar style="auto" />
+        <StopWatch />
     </View>
   );
 }
@@ -22,12 +18,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cnt:{
-    fontSize: 50,
-    marginTop: 20,
+    
   },
 });
